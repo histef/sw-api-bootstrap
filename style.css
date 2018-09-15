@@ -1,0 +1,265 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+
+html, body {
+  height: 100%;
+  width:100%;
+  font-family: 'Poppins', sans-serif;
+  color: #222;
+}
+
+/*NAVBAR*/
+.fa-jedi {
+  font-size: 1.7em;
+}
+.navbar {
+  /*1 rem/em is 16 pixels*/
+  padding: .8rem;
+}
+
+.nav-link {
+  font-size: 1.1em;
+}
+
+/*IMAGE SLIDER*/
+.carousel-inner img {
+  width: 100%;
+  height:100%;
+}
+
+.carousel-caption {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-45%);
+}
+
+.carousel-caption h1 {
+  font-size: 500%;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 10px orange;
+}
+
+.carousel-caption .btn-outline-light:hover {
+    box-shadow:
+        inset 0 0 50px #fff,
+        inset 20px 0 80px #fff,
+        inset -20px 0 80px #fff,
+        inset 20px 0 300px #fff,
+        inset -20px 0 300px #fff,
+        0 0 50px #fff,
+        -10px 0 80px #fff,
+        10px 0 80px #fff;
+}
+
+.btn-primary {
+border-color: white;
+background-color: red;
+
+}
+
+.btn-primary:hover {
+  border-color: white;
+  /*glow effect*/
+  box-shadow:
+        inset 0 0 50px #fff,      /* inner white */
+        inset 20px 0 80px red,   /* inner left red short */
+        inset -20px 0 80px blue,  /* inner right blue short */
+        inset 20px 0 300px red,  /* inner left red broad */
+        inset -20px 0 300px blue, /* inner right blue broad */
+        0 0 50px #fff,            /* outer white */
+        -10px 0 80px #f0f,        /* outer left magenta */
+        10px 0 80px #0ff;         /* outer right cyan */
+}
+
+.padding {
+  padding-bottom: 2rem;
+}
+
+.welcome {
+  width: 75%; /* 75% of screen width*/
+  margin: 0 auto;
+  padding-top: 2rem;
+}
+
+.welcome hr {
+  border-top: 2px solid #b4b4b4;
+  width: 95%;
+  margin-top: .3rem;
+  margin-bottom: 1rem;
+}
+
+.fa-code {
+  color: #e54d26;
+}
+
+.fa-bold {
+  color: #563d7c;
+}
+
+.fa-css3 {
+  color: #2163af;
+}
+
+.fa-code, .fa-bold, .fa-css3 {
+  font-size: 4em;
+  margin: 1rem;
+}
+
+.fun {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+/*CARDS*/
+.card {
+  background-color: #C6C7C8;
+  overflow: hidden;
+}
+
+/*Animation adapted from https://jsfiddle.net/nqQc7/5580/*/
+.card:after {
+  content: "";
+  position: absolute;
+  top: -350%;
+  left: -210%;
+  width: 200%;
+  height: 250%;
+  opacity: 0;
+  transform: rotate(30deg);
+
+  background: rgba(255, 255, 255, 0.13);
+  /*gradients of white*/
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.13) 0%,
+    rgba(255, 255, 255, 0.13) 77%,
+    rgba(255, 255, 255, 0.5) 92%,
+    rgba(255, 255, 255, 0.0) 100%
+  );
+}
+
+.card .btn {
+  background-color: white;
+}
+
+/*Triggers shine effect*/
+.card:hover:after {
+  opacity: 1;
+  top: -30%;
+  left: -30%;
+  transition-property: left, top, opacity;
+  transition-duration: 0.7s, 0.7s, 0.15s;
+  transition-timing-function: ease;
+}
+
+/*when user clicks on the card, simple animation*/
+.card:active:after {
+  opacity: 0;
+}
+
+/*SOCIALS*/
+.social a {
+  font-size: 3.5em;
+  padding: 3rem;
+}
+
+.fa-facebook {
+  color: #3b5998;
+}
+
+.fa-twitter {
+  color: #00aced;
+}
+
+.fa-google-plus-g {
+  color: #dd4b39;
+}
+
+.fa-instagram {
+  color: #517fa4;
+}
+
+.fa-youtube {
+  color: #bb0000;
+}
+
+.fa-facebook:hover,
+.fa-twitter:hover,
+.fa-google-plus-g:hover,
+.fa-instagram:hover,
+.fa-youtube:hover {
+  color: #d5d5d5;
+}
+
+/*FOOTER*/
+hr.light {
+  border-top: 1px solid #d5d5d5;
+  width: 75%;
+  margin-top: .8rem;
+  margin-bottom: 1rem;
+}
+
+footer {
+  background-color: #3f3f3f;
+  color: #d5d5d5;
+  padding-top: 2rem;
+}
+
+hr.light-100 {
+  border-top: 1px solid #d5d5d5;
+  width: 75%;
+  margin-top: .8rem;
+  margin-bottom: 1rem;
+}
+
+/*MEDIA QUERIES*/
+@media (max-width: 992px) {
+/*  .social a {
+    font-size: 3em;
+    padding: 2rem;
+  }*/
+}
+
+@media (max-width: 768px) {
+  .carousel-caption {
+    top: 50%;
+}
+
+  .carousel-caption h1 {
+    font-size: 350%;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 10px orange;
+  }
+
+  .carousel-caption btn {
+    font-size: 95%;
+    padding: 8px 14px;
+  }
+  .display-4 {
+    font-size: 200%;
+  }
+}
+
+@media (max-width: 576px) {
+  .carousel-caption {
+    top: 40%;
+}
+
+  .carousel-caption h1 {
+    font-size: 250%;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 10px orange;
+  }
+
+  .carousel-caption btn {
+    font-size: 90%;
+    padding: 4px 8px;
+  }
+
+  .display-4 {
+    font-size: 160%;
+  }
+  .social a {
+    font-size: 2em;
+    padding: 1rem;
+  }
+}
