@@ -1,5 +1,3 @@
-
-
 /******QUOTE SECTION*******/
 const quotes = [
   {quote: 'Remember: Your focus determines your reality.', speaker: 'Qui-Gon Jinn'},
@@ -46,7 +44,7 @@ function getCharacters(){
                 <p class="card-text">Birth Year: ${data.birth_year}</p>
                 <p class="card-text">Gender: ${data.gender}</p>
                 <p class="card-text">Height: ${data.height}</p>
-                <a href="#" class="btn btn-outline-secondary">See Full Profile</a>
+                <a href="#" class="btn btn-outline-secondary">See full profile</a>
               </div>
             </div>
           </div>
@@ -68,7 +66,7 @@ starshipBtn.addEventListener('click', showDetails);
 function getStarship() {
   let randomStarship = Math.floor((Math.random()*37)+1);
 
-//fetch Star Wars API
+  //fetch Star Wars API
   fetch(`https://swapi.co/api/starships/${randomStarship}`)
   .then(checkStatus)
     .then( response => {
@@ -112,6 +110,6 @@ window.onload = function(){
 
 // NOTE: star wars person 17 is 'not found', 404 error
 
+
 // TODO: Handle no duplicates
-// TODO: Handle #17 (if no info exists)
 //TODO: cursor:not-allowed for the buttons that don't work
