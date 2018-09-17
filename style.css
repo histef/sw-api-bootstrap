@@ -21,6 +21,11 @@ html, body {
   font-size: 1.1em;
 }
 
+.btn-dark {
+border-color: white;
+background-color: red;
+}
+
 /*IMAGE SLIDER*/
 .carousel-inner img {
   width: 100%;
@@ -52,6 +57,9 @@ html, body {
   margin-bottom: 25px;
 }
 
+.carousel-caption .btn:hover {
+  cursor: not-allowed;
+}
 
 .carousel-caption .btn-outline-light:hover {
     box-shadow:
@@ -65,13 +73,7 @@ html, body {
         10px 0 80px #fff;
 }
 
-.btn-primary {
-border-color: white;
-background-color: red;
-
-}
-
-.carousel .btn-primary:hover {
+.carousel .btn-dark:hover {
   border-color: white;
   /*glow effect*/
   box-shadow:
@@ -125,11 +127,21 @@ background-color: red;
 }
 
 /*CARDS*/
+.cards .col-md-4 {
+  margin-bottom: 15px;
+}
+
 .card {
+  height: 100%;
   background-color: #C6C7C8;
   overflow: hidden;
 }
 
+.card-body {
+  display:flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 /*Animation adapted from https://jsfiddle.net/nqQc7/5580/*/
 .card:after {
   content: "";
