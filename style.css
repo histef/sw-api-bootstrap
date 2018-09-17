@@ -71,7 +71,7 @@ background-color: red;
 
 }
 
-.btn-primary:hover {
+.carousel .btn-primary:hover {
   border-color: white;
   /*glow effect*/
   box-shadow:
@@ -169,6 +169,11 @@ background-color: red;
 /*when user clicks on the card, simple animation*/
 .card:active:after {
   opacity: 0;
+}
+
+.starship-info {
+  display: none;
+  white-space: pre-wrap;
 }
 
 /*SOCIALS*/
