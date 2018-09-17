@@ -168,6 +168,11 @@ background-color: red;
   background-color: white;
 }
 
+.card .btn:hover {
+  cursor: not-allowed;
+
+}
+
 /*Triggers shine effect*/
 .card:hover:after {
   opacity: 1;
@@ -176,6 +181,7 @@ background-color: red;
   transition-property: left, top, opacity;
   transition-duration: 0.7s, 0.7s, 0.15s;
   transition-timing-function: ease;
+  cursor: not-allowed;
 }
 
 /*when user clicks on the card, simple animation*/
