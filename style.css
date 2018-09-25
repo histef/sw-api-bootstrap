@@ -91,6 +91,26 @@ background-color: red;
   padding-bottom: 2rem;
 }
 
+/*Quote Section*/
+.quote {
+  font-size: 1.4em;
+}
+
+.quote::before {
+ content: open-quote;
+ font-size: 2em;
+ color: black;
+ opacity: .6;
+}
+
+.quote::after {
+  content: close-quote;
+  font-size: 2em;
+  color: black;
+  opacity: .6;
+
+}
+
 .welcome {
   width: 75%; /* 75% of screen width*/
   margin: 0 auto;
@@ -198,6 +218,7 @@ background-color: red;
 .social a {
   font-size: 3.5em;
   padding: 3rem;
+  cursor: not-allowed;
 }
 
 .fa-facebook {
