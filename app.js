@@ -8,7 +8,7 @@ const quotes = [
   ]
 
 function getQuote(){
-  const jumbotron = document.querySelector('.lead');
+  const jumbotron = document.querySelector('.quote');
   const quoteCredit = document.querySelector('.quote-credit');
   let randomIndex = Math.floor((Math.random()*5));
 
