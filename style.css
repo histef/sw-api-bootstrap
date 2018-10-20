@@ -29,12 +29,12 @@ background-color: red;
 /*IMAGE SLIDER*/
 .carousel-inner img {
   width: 100%;
-  height: 500px;
+  height: 700px;
 }
 
 .carousel-caption {
   position: absolute;
-  top: 45%;
+  top: 55%;
   transform: translateY(-45%);
   perspective: 100px;
 }
@@ -43,7 +43,7 @@ background-color: red;
 .carousel-caption h1 {
   display: inline-block;
   font-family: 'Poller One', cursive;
-  font-size: 500%;
+  font-size: 6.3em;
   color:#f4a920;
   text-transform: uppercase;
   text-shadow: 1px 1px 10px orange;
@@ -91,7 +91,12 @@ background-color: red;
   padding-bottom: 2rem;
 }
 
-/*Quote Section*/
+/*Jumbotron/Quote Section*/
+.jumbotron {
+  position: relative;
+  height: 250px;
+}
+
 .quote {
   font-size: 1.4em;
   line-height: 1.4 !important;
@@ -105,10 +110,14 @@ background-color: red;
   font-weight: 600;
   opacity: .1;
   position: absolute;
-  top: -60px;
-  left: -.2em;
+  top: -80px;
+  left: .7em;
   text-shadow: none;
   z-index: 1;
+}
+
+.jumbotron .btn {
+  height: 45px;
 }
 
 .welcome {
@@ -271,18 +280,32 @@ hr.light-100 {
 }
 
 /*MEDIA QUERIES*/
-@media (max-width: 992px) {
+@media screen and (max-width: 1050px) {
+  .carousel-inner img {
+    height: 550px;
+  }
 
-}
+  .carousel-caption h1 {
+    font-size: 4.5em;
+  }
 
-@media (max-width: 768px) {
-  .carousel-caption {
-    top: 50%;
+  .quote::before {
+    top: -75px;
+    left: -.1em;
   }
 }
 
+@media screen and (max-width: 768px) {
+  .carousel-inner img {
+    height: 450px;
+  }
+
+  .carousel-caption {
+    top: 50%;
+  }
+
   .carousel-caption h1 {
-    font-size: 350%;
+    font-size: 3.8em;
     text-transform: uppercase;
     text-shadow: 1px 1px 10px orange;
   }
@@ -292,9 +315,29 @@ hr.light-100 {
     padding: 8px 14px;
   }
 
-  .jumbotron .quote-btn{
+  .jumbotron {
+    height: 300px;
+  }
+
+  .quote::before {
+    top: -60px;
+    left: -.2em;
+  }
+
+  .quote-btn{
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    padding: 0;
+    margin: 0;
     display: flex;
     justify-content: center;
+  }
+
+  .ship-container .col-lg-6 {
+    padding-left: 0;
+    padding-right: 0;
   }
 
   .display-4 {
@@ -307,14 +350,14 @@ hr.light-100 {
   }
 }
 
-@media (max-width: 576px) {
+@media screen and (max-width: 576px) {
   .carousel-inner img {
     width: 100%;
     height: 350px;
   }
 
   .carousel-caption {
-    top: 40%;
+    top: 45%;
   }
 
   .carousel-caption h1 {
@@ -327,21 +370,23 @@ hr.light-100 {
     font-size: 40%;
     padding: 4px 8px;
   }
+
   .fa-code, .fa-bold, .fa-css3 {
     font-size: 2em;
     margin: .5rem;
   }
+
   .display-4 {
     font-size: 160%;
   }
+
   .social a {
     font-size: 2em;
     padding: 1rem;
   }
 }
 
-
-@media (max-width: 427px) {
+@media screen and (max-width: 427px) {
   .carousel-inner img {
     width: 100%;
     height: 250px;
@@ -349,7 +394,7 @@ hr.light-100 {
 
   .carousel-caption {
     left: 0;
-    top: 30%;
+    top: 35%;
     width: 100%;
   }
 
@@ -366,6 +411,14 @@ hr.light-100 {
   .carousel-caption .btn {
     font-size: .75em;
     padding: 4px 8px;
+  }
+
+  .jumbotron {
+    height: 325px;
+  }
+
+  .quote {
+    font-size: 1.3em;
   }
 
   .fa-code, .fa-bold, .fa-css3 {

@@ -3,7 +3,7 @@ const quotes = [
   {quote: 'Remember: Your focus determines your reality.', speaker: 'Qui-Gon Jinn'},
   {quote: 'You can’t stop change any more than you can stop the suns from setting.', speaker: 'Shmi Skywalker'},
   {quote: 'What if the democracy we thought we were serving no longer exists, and the Republic has become the very evil we have been fighting to destroy?', speaker: 'Padmé'},
-  {quote: 'Attachment is forbidden. Possession is forbidden. Compassion, which I would define as unconditional love, is essential to a Jedi’s life. So you might say, that we are encouraged to love.', speaker: 'Anakin Skywalker'},
+  {quote: 'Compassion, which I would define as unconditional love, is essential to a Jedi’s life. So you might say, that we are encouraged to love.', speaker: 'Anakin Skywalker'},
   {quote: 'Fear is the path to the dark side.', speaker: 'Yoda'}
   ]
 
@@ -107,9 +107,3 @@ window.onload = function(){
   getCharacters();
   getStarship();
 }
-
-// NOTE: star wars person 17 is 'not found', 404 error
-
-
-// TODO: Handle no duplicates
-//TODO: cursor:not-allowed for the buttons that don't work
